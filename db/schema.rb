@@ -87,19 +87,6 @@ ActiveRecord::Schema.define(:version => 20091121181751) do
     t.boolean  "force_top",  :default => false, :null => false
   end
 
-  create_table "subscriptions", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "ip_address"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.date     "card_expires_on"
-    t.date     "expires_on"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "customer_token"
-    t.boolean  "cancelling",      :default => false, :null => false
-  end
-
   create_table "taggings", :force => true do |t|
     t.integer  "episode_id"
     t.integer  "tag_id"
@@ -114,31 +101,6 @@ ActiveRecord::Schema.define(:version => 20091121181751) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "transaction_responses", :force => true do |t|
-    t.integer  "subscription_id"
-    t.string   "action"
-    t.integer  "amount"
-    t.boolean  "success"
-    t.string   "authorization"
-    t.string   "message"
-    t.text     "params"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "persistence_token"
-    t.string   "crypted_password"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "admin",             :default => false, :null => false
-    t.boolean  "pro",               :default => false, :null => false
-    t.string   "pro_token"
   end
 
 end
