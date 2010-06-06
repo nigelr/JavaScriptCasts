@@ -1,0 +1,12 @@
+<%- flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<%- end -%>
+
+<% form_for @interest do |f| %>
+  <% #= f.error_messages %>
+  <p>
+    <%= f.label :email, "Notify me" %><br />
+    <%= f.text_field :email, :size => 50 %>
+  </p>
+  <p><%= f.submit "Subscribe" %></p>
+<% end %>

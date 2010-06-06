@@ -1,0 +1,12 @@
+<% title "Interest" %>
+
+<p>
+  <strong>Email:</strong>
+  <%=h @interest.email %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_interest_path(@interest) %> |
+  <%= link_to "Destroy", @interest, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", interests_path %>
+</p>

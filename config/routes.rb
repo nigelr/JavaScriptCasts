@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :interests
+
   map.resources :spam_questions
 
   map.resources :spam_checks
@@ -20,5 +22,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions
   map.resources :spam_reports, :member => { :confirm => :post }, :collection => { :confirm => :post }
   
-  map.root :episodes
+  map.root :interests
 end

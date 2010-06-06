@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091121181751) do
+ActiveRecord::Schema.define(:version => 20100606110055) do
 
   create_table "comments", :force => true do |t|
     t.integer  "episode_id"
@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(:version => 20091121181751) do
     t.integer  "comments_count", :default => 0,     :null => false
     t.integer  "seconds"
     t.boolean  "asciicasts",     :default => false, :null => false
+  end
+
+  create_table "interests", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "spam_checks", :force => true do |t|
