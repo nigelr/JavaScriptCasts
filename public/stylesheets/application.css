@@ -5,12 +5,14 @@ body {
 }
 
 a {
-	color: #1B97F2;
-	text-decoration: none;
+	color: black;
+	text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: underline;
+  background: black;
+  color: white;
+	text-decoration: none;
 }
 
 a img {
@@ -22,8 +24,10 @@ h1 {
 }
 
 h2, h2 a {
-  color: #E98C08;
+  color: black;
   font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
 h3 {
@@ -50,13 +54,23 @@ ul {
 }
 
 #container {
-  width: 680px;
+  width: 960px;
   margin: 0 auto;
 }
 
 #logo {
-  margin-top: 40px;
-  margin-left: 74px;
+  margin: 20px 0 40px 0;
+  text-align: center;
+}
+
+#logo > h1 > a {
+  background: url(/images/logo.png) no-repeat top;
+  display: block;
+  height: 88px;
+}
+
+#logo span {
+  display: none;
 }
 
 #flash_notice {
@@ -76,13 +90,13 @@ ul {
 }
 
 #main {
-  width: 500px;
+  width: 700px;
   float: left;
 }
 
 #side {
-  margin-left: 530px;
-  width: 150px;
+  margin-left: 740px;
+  width: 200px;
   color: #333;
   font-size: 11px;
   padding-top: 20px;
@@ -113,7 +127,14 @@ ul {
 }
 
 #side #navigation {
-  color: #999;
+  color: #222;
+}
+
+#side > .section > strong {
+  color: #666;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .clear {
@@ -127,6 +148,15 @@ ul {
 
 .content, .main, #flash_notice, #flash_error {
   margin-left: 100px;
+}
+
+h1.content {
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.content ul {
+  margin: 0 0 0 20px;
 }
 
 .episode .side {
