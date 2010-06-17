@@ -9,6 +9,12 @@ a {
 	text-decoration: underline;
 }
 
+a[href^="http://feeds.feedburner"] { color: #FF4E00; text-decoration: none; }
+a[href^="http://feeds.feedburner"]:hover { background: none; color: #FF4E00; text-decoration: none; }
+
+a[href^="http://phobos.apple.com"] { color: #195899; text-decoration: none; }
+a[href^="http://phobos.apple.com"]:hover { background: none; color: #195899; text-decoration: none; }
+
 a:hover {
   background: black;
   color: white;
